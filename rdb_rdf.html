@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>RDB to RDF Mockup</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row no-gutters mb-5">
+                <div class="col-2">
+                    <h4>Term Selection</h4>
+                    <p>This is a listing of relational database tables and their columns.  The user will select a column to map from here.</p>
+                </div>
+                <div class="col">
+                    <h4>Tables</h4>
+                    <div class="list-group-flush">
+                      <button type="button" class="list-group-item list-group-item-action active">Patients</button>
+                      <button type="button" class="list-group-item list-group-item-action">Results</button>
+                      <button type="button" class="list-group-item list-group-item-action">Accounts</button>
+                      <button type="button" class="list-group-item list-group-item-action">Samples</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Columns</h4>
+                    <div class="list-group-flush">
+                      <button type="button" class="list-group-item list-group-item-action">id</button>
+                      <button type="button" class="list-group-item list-group-item-action">fname</button>
+                      <button type="button" class="list-group-item list-group-item-action">lname</button>
+                      <button type="button" class="list-group-item list-group-item-action">pid</button>
+                      <button type="button" class="list-group-item list-group-item-action active">dob</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                      <div class="card-header d-flex justify-content-between">
+                         <h4>dob</h4>
+                         <small>DATEFIELD</small>
+                     </div>
+                      <div class="row">
+                          <div class="col">
+                            <div class="card-block">
+                                <p class="card-text">A persons date of birth.</p>
+                                <p class="card-text">Not Required</p>
+                                <p class="card-text">3,726 Unique Entries</p>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card-block">
+                              <h5>Example Data</h5>
+                              <ul class="list-group list-group-flush small">
+                                  <li class="list-group-item">4/11/1987</li>
+                                  <li class="list-group-item">2/19/1958</li>
+                                  <li class="list-group-item">6/10/1960</li>
+                                  <li class="list-group-item">1/30/1972</li>
+                              </ul>
+                          </div>
+                          </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col">
+                    <h4>Term Searching</h4>
+                    <p>After selecting a relational database column the user will search for terms from the OboFoundry.  The search results will display on the right side showing the label and definition as well as possible properties that can be used if that term is selected.</p>
+                    <div class="card">
+                        <div class="card-block">
+                            <form class="form-inline">
+                                  <label class="mr-sm-2" for="obosearch">OboFoundry</label>
+                                  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="obosearch" placeholder="Term Search">
+
+                                  <button type="submit" class="btn btn-primary">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div clas='col'>
+                    <h4>Obo Search Results</h4>
+                    <div id="accordion" role="tablist">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4>date of birth</h4>
+                                <small>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68615</small>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="card-block">
+                                    <p class="card-text"><strong>Definition: </strong>The calendar date on which a person was born.</p>
+                                </div>
+                              </div>
+                              <div class="col">
+                                  <div class="card-block">
+                                      <h5>Object Properties</h5>
+                                      <ul class="list-group list-group-flush small">
+                                          <li class="list-group-item">'has primitive value specification' some xsd:dateTime</li>
+                                          <li class="list-group-item">'has value specification' exactly 1 number</li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <h4>date of birth</h4>
+                                <small>http://www.ebi.ac.uk/efo/EFO_0004950</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-2">
+                <h4>Term Mapping</h4>
+                <p>After selecting a target OboFoundry term to map to, the user will complete the actual mapping and be shown a graph of what this mapping will look like below.</p>
+            </div>
+                <div class="card col">
+                    <div class="card-block">
+                        <p>Here the user needs to select which object this mapping relates to and will have previously been populated in the mapping process.</p>
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <label class="mr-sm-2" for="exampleSelect1">is about</label>
+                                <select class="form-control" id="exampleSelect1">
+                                  <option>Patient</option>
+                                </select>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+                <div class="card col">
+                    <form class="form">
+                      <div class="form-group row">
+                          <label class="col-4 col-form-label" for="exampleSelect1">has primitive value specification</label>
+                          <div class="col-8">
+                              <select class="form-control" id="exampleSelect1">
+                                  <option>Patients.dob</option>
+                               </select>
+                           </div>
+                       </div>
+                   </form>
+                    <form class="form">
+                      <div class="form-group row">
+                          <label class="col-4 col-form-label" for="exampleSelect2">has value specification</label>
+                          <div class="col-8">
+                              <select class="form-control" id="exampleSelect2">
+                                  <option></option>
+                                  <option>Patient</option>
+                                  <option>Sample</option>
+                               </select>
+                           </div>
+                      </div>
+                      </form>
+                </div>
+            </div>
+            <div class="row">
+              <div class="card mx-auto">
+                  <div class="card-block">
+                  <h5>RDF Mapping</h5>
+              </div>
+              <img src="test.png">
+              </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

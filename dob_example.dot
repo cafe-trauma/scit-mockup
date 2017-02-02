@@ -1,0 +1,10 @@
+digraph g {
+patient [style=rounded, label="_:patient"]
+dob [style=rounded, label="_:dob"]
+dob_class [shape=box, label="date of birth"]
+dob_value [shape=rounded, label="2001-10-26T21:32:52"]
+graph [splines=true, nodesep=.5, ranksep=0, overlap=false];
+dob -> patient [label="is about"]
+dob -> dob_class [label="rdf:type"]
+dob -> dob_value [label="has primitive value specification"]
+}
