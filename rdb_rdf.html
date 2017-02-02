@@ -5,12 +5,18 @@
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <style>
+            .list-group-item {
+                padding: .25rem .5rem;
+            }
+        </style>
     </head>
-    <body>
-        <div class="container-fluid">
-            <div class="row no-gutters mb-5">
+    <body style="zoom:80%">
+        <div class="container">
+            <h4 class="text-warning">1. Relational Source</h4>
+            <div class="row mb-5">
                 <div class="col">
-                    <h4>Tables</h4>
+                    <h6>Tables</h6>
                     <div class="list-group-flush">
                       <button type="button" class="list-group-item list-group-item-action active">Patients</button>
                       <button type="button" class="list-group-item list-group-item-action">Results</button>
@@ -18,8 +24,8 @@
                       <button type="button" class="list-group-item list-group-item-action">Samples</button>
                     </div>
                 </div>
-                <div class="col">
-                    <h4>Columns</h4>
+                <div class="col mr-5">
+                    <h6>Columns</h6>
                     <div class="list-group-flush">
                       <button type="button" class="list-group-item list-group-item-action">id</button>
                       <button type="button" class="list-group-item list-group-item-action">fname</button>
@@ -60,7 +66,8 @@
                 </div>
             </div>
             <div class="row mb-5">
-                <div class="col">
+                <div class="col mb-5">
+                    <h4 class="text-warning">2. Search OBO Foundry</h4>
                     <div class="card">
                         <div class="card-block">
                             <form class="form-inline">
@@ -103,6 +110,7 @@
                     </div>
                 </div>
             <div class="col">
+                <h4 class="text-warning">3. Map fields</h4>
                 <div class="card">
                     <div class="card-block">
                         <form class="form">
@@ -131,7 +139,7 @@
                   <div class="card-block">
                       <h5>RDF Mapping</h5>
                   </div>
-                  <img src="test.png">
+                  <img class="mx-auto" src="test.png">
                   </div>
                 </div>
             </div>
