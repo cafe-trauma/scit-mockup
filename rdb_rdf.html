@@ -9,10 +9,6 @@
     <body>
         <div class="container-fluid">
             <div class="row no-gutters mb-5">
-                <div class="col-2">
-                    <h4>Term Selection</h4>
-                    <p>This is a listing of relational database tables and their columns.  The user will select a column to map from here.</p>
-                </div>
                 <div class="col">
                     <h4>Tables</h4>
                     <div class="list-group-flush">
@@ -41,9 +37,11 @@
                       <div class="row">
                           <div class="col">
                             <div class="card-block">
-                                <p class="card-text">A persons date of birth.</p>
-                                <p class="card-text">Not Required</p>
-                                <p class="card-text">3,726 Unique Entries</p>
+                                <ul>
+                                    <li>A persons date of birth.</li>
+                                    <li>Not Required</li>
+                                    <li>3,726 Unique Entries</li>
+                                </ul>
                             </div>
                           </div>
                           <div class="col">
@@ -63,8 +61,6 @@
             </div>
             <div class="row mb-5">
                 <div class="col">
-                    <h4>Term Searching</h4>
-                    <p>After selecting a relational database column the user will search for terms from the OboFoundry.  The search results will display on the right side showing the label and definition as well as possible properties that can be used if that term is selected.</p>
                     <div class="card">
                         <div class="card-block">
                             <form class="form-inline">
@@ -75,13 +71,10 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                <div clas='col'>
-                    <h4>Obo Search Results</h4>
                     <div id="accordion" role="tablist">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between">
-                                <h4>date of birth</h4>
+                                <h4>[GENEPIO] date of birth</h4>
                                 <small>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68615</small>
                             </div>
                             <div class="row">
@@ -103,65 +96,45 @@
                         </div>
                         <div class="card">
                             <div class="card-header d-flex justify-content-between">
-                                <h4>date of birth</h4>
+                                <h4>[OBIB] date of birth</h4>
                                 <small>http://www.ebi.ac.uk/efo/EFO_0004950</small>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-2">
-                <h4>Term Mapping</h4>
-                <p>After selecting a target OboFoundry term to map to, the user will complete the actual mapping and be shown a graph of what this mapping will look like below.</p>
-            </div>
-                <div class="card col">
+            <div class="col">
+                <div class="card">
                     <div class="card-block">
-                        <p>Here the user needs to select which object this mapping relates to and will have previously been populated in the mapping process.</p>
-                        <form class="form-inline">
-                          <div class="form-group">
-                              <label class="mr-sm-2" for="exampleSelect1">is about</label>
-                                <select class="form-control" id="exampleSelect1">
-                                  <option>Patient</option>
-                                </select>
+                        <form class="form">
+                          <div class="form-group row">
+                              <label class="col-4 col-form-label" for="exampleSelect1">has primitive value specification</label>
+                              <div class="col-8">
+                                  <select class="form-control" id="exampleSelect1">
+                                      <option>Patients.dob</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </form>
+                        <form class="form">
+                          <div class="form-group row">
+                              <label class="col-4 col-form-label" for="exampleSelect2">has value specification</label>
+                              <div class="col-8">
+                                  <select class="form-control" id="exampleSelect2">
+                                      <option></option>
+                                      <option>Patient</option>
+                                      <option>Sample</option>
+                                   </select>
+                               </div>
                           </div>
                       </form>
                   </div>
-                </div>
-                <div class="card col">
-                    <form class="form">
-                      <div class="form-group row">
-                          <label class="col-4 col-form-label" for="exampleSelect1">has primitive value specification</label>
-                          <div class="col-8">
-                              <select class="form-control" id="exampleSelect1">
-                                  <option>Patients.dob</option>
-                               </select>
-                           </div>
-                       </div>
-                   </form>
-                    <form class="form">
-                      <div class="form-group row">
-                          <label class="col-4 col-form-label" for="exampleSelect2">has value specification</label>
-                          <div class="col-8">
-                              <select class="form-control" id="exampleSelect2">
-                                  <option></option>
-                                  <option>Patient</option>
-                                  <option>Sample</option>
-                               </select>
-                           </div>
-                      </div>
-                      </form>
-                </div>
-            </div>
-            <div class="row">
-              <div class="card mx-auto">
                   <div class="card-block">
-                  <h5>RDF Mapping</h5>
-              </div>
-              <img src="test.png">
-              </div>
+                      <h5>RDF Mapping</h5>
+                  </div>
+                  <img src="test.png">
+                  </div>
+                </div>
             </div>
-        </div>
         </div>
     </body>
 </html>
